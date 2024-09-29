@@ -1,0 +1,45 @@
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/upgrade
+web/app/uploads/*
+web/app/languages/*
+web/app/cache/*
+!web/app/uploads/.gitkeep
+
+# Theme
+web/app/themes/*
+!web/app/themes/mawi-theme
+web/app/themes/mawi-theme/assets/build/
+web/app/themes/mawi-theme/library/vendor/*
+
+# WordPress
+web/wp
+web/.htaccess
+web/license.txt
+web/readme.html
+web/sitemap.xml
+web/sitemap.xml.gz
+
+# Logs
+logs
+*.log
+
+# Memcached Plugin
+web/app/object-cache.php
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# NPM
+/node_modules
+hot
+
+# Composer
+/vendor
+
+# PhpStorm
+.idea

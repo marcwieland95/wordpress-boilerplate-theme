@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html {{ site.language_attributes }}>
+<head>
+    {% block head %}
+        <meta charset="{{ site.charset }}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="language" content="{{ site.language }}" data-turbolinks-track="reload">
+
+        {{ function('wp_head') }}
+
+        {#
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ site.theme.link }}/build/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ site.theme.link }}/build/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ site.theme.link }}/build/favicon/favicon-16x16.png">
+        <link rel="manifest" href="{{ site.theme.link }}/build/favicon/site.webmanifest">
+        <link rel="mask-icon" href="{{ site.theme.link }}/build/favicon/safari-pinned-tab.svg" color="#77726f">
+        <meta name="apple-mobile-web-app-title" content="MADE">
+        <meta name="application-name" content="MADE">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="theme-color" content="#ffffff">
+
+        <meta name="turbolinks-cache-control" content="no-preview">
+        #}
+    {% endblock %}
+</head>
+<body class="is-body-init {{ body_class }}">
+
+    {{ function('wp_body_open') }}
+
+    {% include "includes/header.html.twig" %}
+
+    <div class="l-wrapper">
+        {% block body %}
+
+            <main class="l-main">
+                <div class="l-content">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </main>
+
+        {% endblock %}
+        {% include "includes/footer.html.twig" %}
+    </div>
+
+    {{ function('wp_footer') }}
+
+    {% block footer %}{% endblock %}
+
+</body>
+</html>

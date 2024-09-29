@@ -1,0 +1,11 @@
+/* Base */
+@import "_base.css";
+
+body {
+    /* comment */
+    background-color: lightblue;
+
+    strong {
+        font-weight: bold;
+    }
+}

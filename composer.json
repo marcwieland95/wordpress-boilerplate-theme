@@ -1,0 +1,69 @@
+{
+    "name": "marcwieland/theme-bootstrap",
+    "description": "WordPress Theme based on roots/bedrock",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Marc Wieland",
+            "email": "mail@marcwieland.name"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "wpackagist-plugin/query-monitor": "*"
+    },
+    "require": {
+        "php": ">=8.3",
+        "composer/installers": "^1.8",
+        "vlucas/phpdotenv": "^4.1.3",
+        "oscarotero/env": "^1.2.0",
+        "roots/wordpress": "6.6.*",
+        "roots/wp-config": "1.0.0",
+        "roots/wp-password-bcrypt": "1.0.0",
+        "wpackagist-plugin/clean-image-filenames": "*",
+        "wpackagist-plugin/regenerate-thumbnails": "*",
+        "wpackagist-plugin/svg-support": "*",
+        "wpackagist-plugin/disable-comments": "*",
+        "wpackagist-plugin/simple-page-ordering": "*",
+        "wpackagist-plugin/cachify": "*",
+        "wp-cli/wp-cli-bundle": "*",
+        "mundschenk-at/php-typography": "^6.7",
+        "timber/timber": "^2.2"
+    },
+    "autoload": {
+        "exclude-from-classmap": [
+            "/dist/**",
+            "/yoast/**"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "roots/wordpress-core-installer": true,
+            "composer/installers": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "installer-paths": {
+            "web/app/mu-plugins/{$name}/": [
+                "type:wordpress-muplugin"
+            ],
+            "web/app/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "web/app/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        },
+        "wordpress-install-dir": "web/wp"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "name": "mawi-theme",
+    "version": "1.x",
+    "description": "WordPress Template und Logik für Marc Wieland",
+    "author": "Marc Wieland <mail@marcwieland.name>",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "husky": "^1.3.1",
+        "postcss-preset-env": "^10.0.5",
+        "turbolinks": "^5.2.0",
+        "vite": "^5.4.1",
+        "laravel-vite-plugin": "^1.0.5"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "make coding-standard"
+        }
+    },
+    "dependencies": {
+    }
+}
